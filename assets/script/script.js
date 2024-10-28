@@ -1,4 +1,4 @@
-const allContainerItems = gsap.utils.toArray('.item a'); // Select <a> tags inside .item
+const allContainerItems = gsap.utils.toArray('.item a'); 
 const venueImageWrap = document.querySelector('.container-img-wrap');
 const venueImage = document.querySelector('.container-img');
 
@@ -23,8 +23,7 @@ function venueHover(e) {
     if (e.type === "mouseenter") {
         const targetImage = e.target.dataset.img;
 
-        if (targetImage) { // Ensure targetImage is defined
-            console.log("Image path:", targetImage); // Log to confirm
+        if (targetImage) { 
             gsap.timeline()
                 .set(venueImage, { backgroundImage: `url(${targetImage})` })
                 .to(venueImageWrap, { duration: 0.5, autoAlpha: 1 });
